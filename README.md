@@ -52,6 +52,10 @@ This will:
 | Container  | Docker, Docker Compose |
 
 # 📑 API Endpoints
+Open 
+```bash
+http://localhost:8000/docs/
+```
 ### ▶️ POST 
 /api/forms/wheel-specifications
 
