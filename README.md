@@ -84,7 +84,8 @@ Submit a new form.
 }
 ```
 ### 🔍 GET 
-/api/forms/wheel-specifications
+
+http://localhost:8000/api/forms/wheel-specifications?formNumber=WHEEL-2025-012
 
 **Query Parameters (Optional):**
 - formNumber
