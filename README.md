@@ -50,3 +50,63 @@ This will:
 | DB         | PostgreSQL             |
 | Env Config | python-dotenv          |
 | Container  | Docker, Docker Compose |
+
+# 📑 API Endpoints
+### ▶️ POST 
+/api/forms/wheel-specifications
+
+Submit a new form.
+
+**Request Body** (JSON):
+
+```bash
+{
+  "formNumber": "WHEEL-2025-001",
+  "submittedBy": "user_id_123",
+  "submittedDate": "2025-07-03",
+  "fields": {
+    "treadDiameterNew": "915 (900-1000)",
+    "wheelGauge": "1600 (+2,-1)"
+  }
+}
+```
+**Success Response (201):**
+```bash
+{
+  "success": true,
+  "message": "Wheel specification submitted successfully.",
+  "data": {
+    "formNumber": "WHEEL-2025-001",
+    "submittedBy": "user_id_123",
+    "submittedDate": "2025-07-03",
+    "status": "Saved"
+  }
+}
+```
+### 🔍 GET 
+/api/forms/wheel-specifications
+
+**Query Parameters (Optional):**
+- formNumber
+- submittedBy
+- submittedDate
+**Example:**
+```bash
+GET /api/forms/wheel-specifications?formNumber=WHEEL-2025-001
+```
+**Success Response (200):**
+```bash
+[
+  {
+    "formNumber": "WHEEL-2025-001",
+    "submittedBy": "user_id_123",
+    "submittedDate": "2025-07-03",
+    "fields": {
+      "treadDiameterNew": "915 (900-1000)",
+      "wheelGauge": "1600 (+2,-1)"
+    }
+  }
+]
+
+```
+
