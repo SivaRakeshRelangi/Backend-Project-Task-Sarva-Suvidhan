@@ -20,8 +20,8 @@ A FastAPI-based backend service to manage submission and retrieval of **Wheel Sp
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/kpa_backend.git
-cd kpa_backend
+git clone https://github.com/SivaRakeshRelangi/Backend-Project-Task-Sarva-Suvidhan.git
+cd Backend-Project-Task-Sarva-Suvidhan
 ```
 
 ### 2️⃣ Set Up Environment
