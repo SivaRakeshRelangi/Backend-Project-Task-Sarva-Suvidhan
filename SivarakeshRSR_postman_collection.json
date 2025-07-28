@@ -1,0 +1,62 @@
+{
+  "info": {
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "name": "KPA Form API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Wheel Specification",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"formNumber\": \"WHEEL-2025-001\",\n  \"submittedBy\": \"user123\",\n  \"submittedDate\": \"2025-07-28\",\n  \"fields\": {\n    \"treadDiameterNew\": \"915 (900-1000)\",\n    \"lastShopIssueSize\": \"837 (800-900)\",\n    \"condemningDia\": \"825 (800-900)\",\n    \"wheelGauge\": \"1600 (+2,-1)\"\n  }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/forms/wheel-specifications",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "forms", "wheel-specifications"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Wheel Specifications (with Filters)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user123&submittedDate=2025-07-28",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "forms", "wheel-specifications"],
+          "query": [
+            {
+              "key": "formNumber",
+              "value": "WHEEL-2025-001"
+            },
+            {
+              "key": "submittedBy",
+              "value": "user123"
+            },
+            {
+              "key": "submittedDate",
+              "value": "2025-07-28"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
